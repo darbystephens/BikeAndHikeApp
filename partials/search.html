@@ -6,16 +6,27 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
     <title>Trail</title> -->
-  <!-- </head> 
+  <!-- </head>
   <body> -->
     <div class="backgroundLayer">
     </div>
-      <h1 id="createHeader">CREATE EVENT</h1>
+      <h1 id="createHeader">SEARCH EVENT</h1>
     <div id="bikeContainer">
       <img id="bikeImg" src="imgs/bike.jpeg">
     </div>
-    <a id="searchEvent" href="#">Search Event</a>
-    <a id="mainLink" href="#">Home Page</a>
+    <div class="formContainer">
+      <form>
+        <input type="text" placeholder="City">
+        <input type="text" placeholder="State">
+        <input type="number" placeholder="Radius">
+        <select>
+          <option value="">All</option>
+          <option value="hiking">Hiking</option>
+          <option value="mountain biking">Mountain Biking</option>
+          <option value="camping">Camping</option>
+        </select>
+        <button id="searchButton">Search Location</button>
+      </form>
 
   <!-- </body> -->
 <!-- </html> -->
