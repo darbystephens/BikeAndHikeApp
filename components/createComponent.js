@@ -1,8 +1,11 @@
 (function(){
   var createComponent = {
     templateUrl:"partials/create.html",
-    controller:function(){
-      console.log("create");
+    controller:function(trailService){
+      vm = this;
+      vm.checkResults = function(){
+        
+      }
     }
 
 

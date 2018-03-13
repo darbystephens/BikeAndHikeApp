@@ -16,10 +16,10 @@
       <img id="hikerImg" src="imgs/hiker.jpeg">
     </div>
     <div class="formContainer">
-      <form>
-        <input type="text" placeholder="City">
-        <input type="text" placeholder="State">
-        <input type="number" placeholder="Radius">
+      <form ng-submit="$ctrl.checkResults()">
+        <input type="text" placeholder="City" ng-model="">
+        <input type="text" placeholder="State" ng-model="">
+        <input type="number" placeholder="Radius" ng-model="">
         <select>
           <option value="">All</option>
           <option value="hiking">Hiking</option>
