@@ -1,18 +1,22 @@
 (function(){
 
   var trailService = function($http) {
+        var savedParamsObj={};
         return {
             getTrailInfo: getTrailInfo
         };
         function getTrailInfo(searchParams) {
+          console.log("in service", searchParams);
+          console.log("city search", searchParams.city);
+
           return $http({
             method: "GET",
             url: "https://trailapi-trailapi.p.mashape.com/",
             params: {
-              "q[activities_activity_type_name_eq]": "hiking",
-              "q[city_cont]": "Denver",
-              "q[state_cont]": "Colorado",
-              "radius": "50"
+              "q[activities_activity_type_name_eq]": searchParams.activities,
+              "q[city_cont]": searchParams.city,
+              "q[state_cont]": searchParams.state,
+              "radius": searchParams.radius
             },
             headers: {
               "X-Mashape-Key": "Y16euzfYdpmshVYU6lH6HVzHPfCSp1GDqpbjsnPGBk4FMSMEfH",

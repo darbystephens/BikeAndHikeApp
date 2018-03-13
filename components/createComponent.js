@@ -3,16 +3,19 @@
     templateUrl:"partials/create.html",
     controller:function(trailService){
       var vm = this;
-      vm.checkResults = function(){
+      vm.getTrailInfo = function(searchParams) {
+        console.log("in controller", searchParams);
 
+        trailService.getTrailInfo(searchParams).then(function(locations){
+          vm.locations = locations;
+        });
       }
-      trailService.getTrailInfo().then(function(locations){
-        vm.locations = locations;
 
-      });
-      vm.city="Portland";
-      vm.state="Oregon";
-      vm.radius = 50;
+      vm.searchParams = {};
+      vm.searchParams.city="Portland";
+      vm.searchParams.state="Oregon";
+      vm.searchParams.radius = 50;
+      vm.searchParams.activities="hiking";
     }
 
 

@@ -6,11 +6,11 @@
   <img id="hikerImg" src="imgs/hiker.jpeg">
 </div>
 <div class="formContainer">
-  <form ng-submit="$ctrl.checkResults()">
-    <input type="text" placeholder="City" ng-model="$ctrl.city">
-    <input type="text" placeholder="State" ng-model="$ctrl.state">
-    <input type="number" placeholder="Radius" ng-model="$ctrl.radius">
-    <select>
+  <form ng-submit="$ctrl.getTrailInfo($ctrl.searchParams)">
+    <input type="text" placeholder="City" ng-model="$ctrl.searchParams.city">
+    <input type="text" placeholder="State" ng-model="$ctrl.searchParams.state">
+    <input type="number" placeholder="Radius" ng-model="$ctrl.searchParams.radius">
+    <select ng-model="$ctrl.searchParams.activities">
       <option value="">All</option>
       <option value="hiking">Hiking</option>
       <option value="mountain biking">Mountain Biking</option>
