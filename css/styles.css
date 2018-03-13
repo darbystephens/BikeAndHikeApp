@@ -6,7 +6,7 @@
 
 .backgroundLayer {
   background-color: rgba(15,15,15,0.5);
-  position: absolute;
+  position: fixed;
   z-index: 2;
   height: 100%;
   width: 100%;
@@ -17,7 +17,7 @@ h1 {
   color: white;
   position: absolute;
   z-index: 3;
-  }
+}
 
 #createHeader {
   left:50px;
@@ -108,6 +108,42 @@ a {
   left: 15px;
 }
 
+.eventContainer {
+  margin: 0 auto;
+  z-index: 6;
+  width: 80%;
+  height: 100%;
+  background-color:rgba(15,15,15,0.5);
+  position: relative;
+  margin-top: 250px;
+}
+
+.locationContainer {
+  position: relative;
+  z-index: 10;
+  width:100%;
+  margin-top: 500px;
+  background-color:rgba(0,0,0,0.5);
+}
+
+.location p {
+  color: white;
+  margin-left: 10px;
+}
+
+.bottom{
+    margin-bottom: 100px;
+}
+
+.event {
+  padding: 3px;
+}
+
+.event p {
+  margin-left: 5px;
+  color: white;
+}
+
 form {
   background-color:
   position:absolute;
@@ -158,7 +194,7 @@ select {
 
 .backgroundLayer {
   background-color: rgba(0,0,0,0.5);
-  position: absolute;
+  position: fixed;
   z-index: 2;
   height: 100%;
   width: 350px;

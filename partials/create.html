@@ -1,35 +1,31 @@
-<!-- <!DOCTYPE html> -->
-<!-- <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
-    <title>Trail</title>
-  </head> -->
-  <!-- <body> -->
-    <div class="backgroundLayer">
-    </div>
-    <h1 id="createHeader">CREATE EVENT</h1>
-    <div id="hikerContainer">
-      <img id="hikerImg" src="imgs/hiker.jpeg">
-    </div>
-    <div class="formContainer">
-      <form ng-submit="$ctrl.checkResults()">
-        <input type="text" placeholder="City" ng-model="">
-        <input type="text" placeholder="State" ng-model="">
-        <input type="number" placeholder="Radius" ng-model="">
-        <select>
-          <option value="">All</option>
-          <option value="hiking">Hiking</option>
-          <option value="mountain biking">Mountain Biking</option>
-          <option value="camping">Camping</option>
-        </select>
-        <button id="searchButton">Search Location</button>
-      </form>
-    </div>
 
-  <!-- </body> -->
-<!-- </html> -->
-<!-- TODO needs a footer? -->
+<div class="backgroundLayer">
+</div>
+<h1 id="createHeader">CREATE EVENT</h1>
+<div id="hikerContainer">
+  <img id="hikerImg" src="imgs/hiker.jpeg">
+</div>
+<div class="formContainer">
+  <form ng-submit="$ctrl.checkResults()">
+    <input type="text" placeholder="City" ng-model="$ctrl.city">
+    <input type="text" placeholder="State" ng-model="$ctrl.state">
+    <input type="number" placeholder="Radius" ng-model="$ctrl.radius">
+    <select>
+      <option value="">All</option>
+      <option value="hiking">Hiking</option>
+      <option value="mountain biking">Mountain Biking</option>
+      <option value="camping">Camping</option>
+    </select>
+    <button id="searchButton">Search Location</button>
+  </form>
+</div>
+<div class="locationContainer">
+  <div class="location" ng-repeat="location in $ctrl.locations" >
+    <!-- {{ location }} -->
+    <p>City: {{location.city}}</p>
+    <p>State: {{location.state}}</p>
+    <p>URL: {{locaton.activities.url}}</p>
+    <p>Location: {{location.name}}</p>
+    <p class="bottom">Directions: {{location.directions}}</p>
+  </div>
+</div>

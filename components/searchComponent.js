@@ -1,8 +1,13 @@
 (function(){
   var searchComponent = {
     templateUrl:"partials/search.html",
-    controller: function(){
+    controller: function(trailService){
       console.log("search");
+      var vm = this;
+      trailService.getTrailInfo().then(function(rows){
+        vm.rows = rows;
+      });
+
     }
   }
 
