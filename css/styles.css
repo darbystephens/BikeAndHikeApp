@@ -17,6 +17,7 @@ h1 {
   color: white;
   position: absolute;
   z-index: 3;
+  width: 155px;
 }
 
 #createHeader {
@@ -95,7 +96,7 @@ a {
   position: absolute;
   z-index: 7;
   text-align: center;
-  top:200px;
+  top:140px;
   margin: 15px;
 }
 
@@ -111,9 +112,8 @@ a {
 .eventContainer {
   margin: 0 auto;
   z-index: 6;
-  width: 80%;
-  height: 100%;
-  background-color:rgba(15,15,15,0.5);
+  width: 90%;
+  background-color:rgba(15,15,15,0);
   position: relative;
   margin-top: 250px;
 }
@@ -122,8 +122,8 @@ a {
   position: relative;
   z-index: 10;
   width:100%;
-  margin-top: 500px;
-  background-color:rgba(0,0,0,0.5);
+  margin-top: 565px;
+  background-color:rgba(0,0,0,0);
 }
 
 .location p {
@@ -131,15 +131,22 @@ a {
   margin-left: 10px;
 }
 
-.bottom{
+.location {
+  background-color:rgba(0,0,0,0.5);
+  margin-bottom:10px;
+}
+
+.bottom {
     margin-bottom: 100px;
 }
 
-.event {
+.eventDiv {
   padding: 3px;
+  background-color:rgba(15,15,15,0.5);
+  margin-bottom: 20px;
 }
 
-.event p {
+.eventDiv p {
   margin-left: 5px;
   color: white;
 }
@@ -180,7 +187,41 @@ select {
   border-bottom: 2px solid white;
 }
 
+textarea {
+  width: 80%;
+  background-color: rgba(15,15,15,0.2);
+  font-size: 20px;
+  color: white;
+  border: none;
+  border-bottom: 2px solid white;
+  margin-top: 20px;
+}
+
+.thumbnail {
+
+  width:75%;
+  margin-left: 10px;
+}
+
+.top {
+  padding-top: 10px;
+}
+
+.createButton {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  color: white;
+  font-size: 30px;
+  background-color: rgba(0,0,0,.7);
+  border: none;
+}
+
 @media only screen and (min-width: 768px) {
+
+h1{
+  position: fixed;
+}
 
 #searchEvent {
   left: 50px;
@@ -229,7 +270,7 @@ select {
 }
 
 .formContainer {
-  position: absolute;
+  position: fixed;
   z-index: 7;
   text-align: center;
   top:200px;
@@ -239,7 +280,7 @@ select {
 }
 
 .searchContainer {
-  position: absolute;
+  position: fixed;
   z-index: 7;
   text-align: center;
   top:250px;
@@ -248,9 +289,31 @@ select {
   left: 35px;
 }
 
+.locationContainer {
+  background-color: rgba(15,15,15,0);
+  position: absolute;
+  width: 500px;
+  left: 400px;
+  margin-top: 10px;
+}
+
+.eventContainer {
+  margin-left: 450px;;
+  z-index: 6;
+  width: 400px;
+  background-color:rgba(15,15,15,0);
+  position: relative;
+  margin-top: 50px;
+}
+
+.location {
+  background-color:rgba(15,15,15,0.4);
+  margin-bottom: 5px;
+}
+
 form {
   background-color:
-  position:absolute;
+  position:fixed;
   top: 200px;
   /* background-color: rgba(15,15,15,0.8); */
 }
@@ -282,6 +345,19 @@ select {
   border: none;
 }
 
+textarea {
+  width: 250px;
+}
+
+.createButton {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 200px;
+  color: white;
+  font-size: 30px;
+  background-color: rgba(15,15,15,.4);
+  border: none;
+}
 
 }
 

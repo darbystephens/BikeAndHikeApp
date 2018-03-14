@@ -1,7 +1,6 @@
 (function(){
 
   var trailService = function($http) {
-        var savedParamsObj={};
         return {
             getTrailInfo: getTrailInfo
         };

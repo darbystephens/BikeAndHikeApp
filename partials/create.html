@@ -6,6 +6,8 @@
   <img id="hikerImg" src="imgs/hiker.jpeg">
 </div>
 <div class="formContainer">
+  <input type="text" placeholder=" Host Name/Organization">
+  <textarea rows="4" placeholder="Information"></textarea>
   <form ng-submit="$ctrl.getTrailInfo($ctrl.searchParams)">
     <input type="text" placeholder="City" ng-model="$ctrl.searchParams.city">
     <input type="text" placeholder="State" ng-model="$ctrl.searchParams.state">
@@ -22,10 +24,14 @@
 <div class="locationContainer">
   <div class="location" ng-repeat="location in $ctrl.locations" >
     <!-- {{ location }} -->
-    <p>City: {{location.city}}</p>
+    <p class="top">City: {{location.city}}</p>
     <p>State: {{location.state}}</p>
-    <p>URL: {{locaton.activities.url}}</p>
+    <p>Activity: {{location.activities[0].activity_type_name}}</p>
+    <p>URL: {{location.activities[0].url}}</p>
+    <p>Description: {{location.activities[0].description}}</p>
+    <img class="thumbnail" src="{{location.activities[0].thumbnail}}">
     <p>Location: {{location.name}}</p>
-    <p class="bottom">Directions: {{location.directions}}</p>
+    <p>Directions: {{location.directions}}</p>
+    <button class="createButton">Create</button>
   </div>
 </div>

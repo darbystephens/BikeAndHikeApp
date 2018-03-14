@@ -1,17 +1,20 @@
 (function(){
   var searchComponent = {
     templateUrl:"partials/search.html",
-    controller: function(trailService){
-      console.log("search");
+    controller: function(eventsService){
       var vm = this;
-      trailService.getTrailInfo().then(function(rows){
-        vm.rows = rows;
-      });
+      vm.events = eventsService.getEvents();
+      }
 
     }
-  }
+
 
   angular
     .module("app")
     .component("searchComponent",searchComponent);
 })();
+
+// controller: function(eventsService) {
+//             var vm = this;
+//             $ctrl.events = eventsService.getEvents();
+//         }

@@ -11,11 +11,11 @@
         });
       }
 
-      vm.searchParams = {};
-      vm.searchParams.city="Portland";
-      vm.searchParams.state="Oregon";
-      vm.searchParams.radius = 50;
-      vm.searchParams.activities="hiking";
+      // vm.searchParams = {};
+      // vm.searchParams.city="Portland";
+      // vm.searchParams.state="Oregon";
+      // vm.searchParams.radius = 50;
+      // vm.searchParams.activities="hiking";
     }
 
 
