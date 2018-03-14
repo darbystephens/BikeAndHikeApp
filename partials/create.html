@@ -24,14 +24,14 @@
 <div class="locationContainer">
   <div class="location" ng-repeat="location in $ctrl.locations" >
     <!-- {{ location }} -->
-    <p class="top">City: {{location.city}}</p>
-    <p>State: {{location.state}}</p>
-    <p>Activity: {{location.activities[0].activity_type_name}}</p>
-    <p>URL: {{location.activities[0].url}}</p>
-    <p>Description: {{location.activities[0].description}}</p>
+    <p class="top"><span>City:</span> {{location.city}}</p>
+    <p><span>State:</span> {{location.state}}</p>
+    <p><span>Activity:</span> {{location.activities[0].activity_type_name}}</p>
+    <p><span>URL:</span><a href="{{location.activities[0].url}}"></a>{{location.activities[0].url}}</p>
+    <p><span>Description:</span> {{location.activities[0].description}}</p>
     <img class="thumbnail" src="{{location.activities[0].thumbnail}}">
-    <p>Location: {{location.name}}</p>
-    <p>Directions: {{location.directions}}</p>
+    <p><span>Location:</span> {{location.name}}</p>
+    <p><span>Directions:</span> {{location.directions}}</p>
     <button class="createButton">Create</button>
   </div>
 </div>

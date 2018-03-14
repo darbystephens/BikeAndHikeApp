@@ -207,6 +207,10 @@ textarea {
   padding-top: 10px;
 }
 
+span{
+  font-weight: bold;
+}
+
 .createButton {
   margin-top: 10px;
   margin-bottom: 20px;
