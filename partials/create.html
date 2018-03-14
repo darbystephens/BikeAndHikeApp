@@ -17,6 +17,7 @@
       <option value="hiking">Hiking</option>
       <option value="mountain biking">Mountain Biking</option>
       <option value="camping">Camping</option>
+      <option value="caving">Caving</option>
     </select>
     <button id="searchButton">Search Location</button>
   </form>
@@ -27,7 +28,7 @@
     <p class="top"><span>City:</span> {{location.city}}</p>
     <p><span>State:</span> {{location.state}}</p>
     <p><span>Activity:</span> {{location.activities[0].activity_type_name}}</p>
-    <p><span>URL:</span><a href="{{location.activities[0].url}}"> {{location.activities[0].url}}</a></p>
+    <p><span>URL:</span><a href="{{location.activities[0].url}}" target="_blank"> {{location.activities[0].url}}</a></p>
     <p><span>Description:</span> {{location.activities[0].description}}</p>
     <img class="thumbnail" ng-src="{{location.activities[0].thumbnail}}">
     <p><span>Location:</span> {{location.name}}</p>

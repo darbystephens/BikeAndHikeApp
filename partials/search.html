@@ -6,10 +6,10 @@
   <img id="bikeImg" src="imgs/bike.jpeg">
 </div>
 <div class="searchContainer">
-  <input type="text" placeholder="Filter by City" ng-model="cityFilter">
+  <input type="text" placeholder="Filter search" ng-model="hostFilter">
 </div>
 <div class="eventContainer">
-  <div class="eventDiv" ng-repeat="event in $ctrl.events" >
+  <div class="eventDiv" ng-repeat="event in $ctrl.events | filter: hostFilter | orderBy: 'host'" >
     <p><span>Host:</span> {{event.host}}</p>
     <p><span>Information:</span> {{event.information}}</p>
     <p><span>City:</span> {{event.location.city}}</p>
