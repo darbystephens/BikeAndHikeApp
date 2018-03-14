@@ -6,8 +6,8 @@
   <img id="hikerImg" src="imgs/hiker.jpeg">
 </div>
 <div class="formContainer">
-  <input type="text" placeholder=" Host Name/Organization">
-  <textarea rows="4" placeholder="Information"></textarea>
+  <input type="text" placeholder=" Host Name/Organization" ng-model="$ctrl.event.host">
+  <textarea rows="4" placeholder="Information" ng-model="$ctrl.event.information"></textarea>
   <form ng-submit="$ctrl.getTrailInfo($ctrl.searchParams)">
     <input type="text" placeholder="City" ng-model="$ctrl.searchParams.city">
     <input type="text" placeholder="State" ng-model="$ctrl.searchParams.state">
@@ -22,16 +22,16 @@
   </form>
 </div>
 <div class="locationContainer">
-  <div class="location" ng-repeat="location in $ctrl.locations" >
+  <div class="location" ng-repeat="location in $ctrl.locations">
     <!-- {{ location }} -->
     <p class="top"><span>City:</span> {{location.city}}</p>
     <p><span>State:</span> {{location.state}}</p>
     <p><span>Activity:</span> {{location.activities[0].activity_type_name}}</p>
-    <p><span>URL:</span><a href="{{location.activities[0].url}}"></a>{{location.activities[0].url}}</p>
+    <p><span>URL:</span><a href="{{location.activities[0].url}}"> {{location.activities[0].url}}</a></p>
     <p><span>Description:</span> {{location.activities[0].description}}</p>
-    <img class="thumbnail" src="{{location.activities[0].thumbnail}}">
+    <img class="thumbnail" ng-src="{{location.activities[0].thumbnail}}">
     <p><span>Location:</span> {{location.name}}</p>
     <p><span>Directions:</span> {{location.directions}}</p>
-    <button class="createButton">Create</button>
+    <button class="createButton" ng-click="$ctrl.createEvent(location)">Create</button>
   </div>
 </div>

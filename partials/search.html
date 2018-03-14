@@ -6,16 +6,19 @@
   <img id="bikeImg" src="imgs/bike.jpeg">
 </div>
 <div class="searchContainer">
-  <input type="text" placeholder="Filter Search">
+  <input type="text" placeholder="Filter by City" ng-model="cityFilter">
 </div>
 <div class="eventContainer">
   <div class="eventDiv" ng-repeat="event in $ctrl.events" >
-    {{event}}
-    <p>Host: {{event.host}}</p>
-    <p>Date: {{event.date}}</p>
-    <p>Information: {{event.info}}</p>
-    <p>City: {{event.city}}</p>
-    <p>Location: {{event.name}}</p>
+    <p><span>Host:</span> {{event.host}}</p>
+    <p><span>Information:</span> {{event.information}}</p>
+    <p><span>City:</span> {{event.location.city}}</p>
+    <p><span>State:</span> {{event.location.state}}</p>
+    <p><span>Activity:</span> {{event.location.activities[0].activity_type_name}}</p>
+    <p><span>Description:</span> {{event.location.activities[0].description}}</p>
+    <img class="thumbnail" ng-src="{{event.location.activities[0].thumbnail}}">
+    <p><span>Location:</span> {{event.location.name}}</p>
+    <p><span>Directions:</span> {{event.location.directions}}</p>
 
   </div>
 </div>
