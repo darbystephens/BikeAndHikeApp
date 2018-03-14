@@ -10,7 +10,10 @@
         template:"<search-component></search-component>"
       })
       .when("/create",{
-        template:"<create-component></create-component>"
+        template:"<create-component></create-component>",
+        controller: function($rootScope){
+          $rootScope.pageClass = "createBackgroundImage";
+        }
       })
       .otherwise({redirectTo:"/main"});
     });

@@ -9,7 +9,7 @@
   <input type="text" placeholder="Filter search" ng-model="hostFilter">
 </div>
 <div class="eventContainer">
-  <div class="eventDiv" ng-repeat="event in $ctrl.events | filter: hostFilter | orderBy: 'host'" >
+  <div class="eventDiv" ng-repeat="event in $ctrl.events | filter: hostFilter | orderBy: 'host' track by $index" >
     <p><span>Host:</span> {{event.host}}</p>
     <p><span>Information:</span> {{event.information}}</p>
     <p><span>City:</span> {{event.location.city}}</p>
@@ -19,6 +19,5 @@
     <img class="thumbnail" ng-src="{{event.location.activities[0].thumbnail}}">
     <p><span>Location:</span> {{event.location.name}}</p>
     <p><span>Directions:</span> {{event.location.directions}}</p>
-
   </div>
 </div>

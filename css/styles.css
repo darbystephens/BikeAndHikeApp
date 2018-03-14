@@ -4,6 +4,19 @@
    font-family: 'Open Sans', sans-serif;
  }
 
+ .createBackgroundImage {
+   background-image: url("imgs/hiker.jpeg");
+ }
+
+ button {
+   transition: 0.5s all;
+   cursor: pointer;
+ }
+
+button:hover {
+  background-color: rgba(0,0,0,1);
+}
+
 .backgroundLayer {
   background-color: rgba(15,15,15,0.5);
   position: fixed;
@@ -134,6 +147,8 @@ a {
 .location {
   background-color:rgba(0,0,0,0.5);
   margin-bottom:10px;
+  position: relative;
+  padding-bottom: 50px;
 }
 
 .bottom {
@@ -217,13 +232,15 @@ span{
 }
 
 .createButton {
-  margin-top: 10px;
-  margin-bottom: 20px;
-  margin-left: 10px;
   color: white;
   font-size: 30px;
   background-color: rgba(0,0,0,.7);
   border: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 10px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -318,6 +335,7 @@ h1{
 .location {
   background-color:rgba(15,15,15,0.4);
   margin-bottom: 5px;
+  padding-bottom: 70px;
 }
 
 form {
@@ -361,15 +379,44 @@ textarea {
 .createButton {
   margin-top: 10px;
   margin-bottom: 20px;
-  margin-left: 200px;
   color: white;
   font-size: 30px;
   background-color: rgba(15,15,15,.4);
   border: none;
 }
 
+
+
 }
 
-@media only screen and (min-width:1224px) {
-  
+@media only screen and (min-width:1150px) {
+
+.locationContainer {
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.location:nth-child(even) {
+  width: 390px;
+  margin-right: 10px;
+}
+
+.location:nth-child(odd){
+  width: 390px;
+  margin-right: 10px;
+}
+
+.eventContainer {
+  width:800px;
+  margin-left: 360px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.eventDiv {
+  width: 380px;
+  margin-right: 10px;
+}
+
 }
