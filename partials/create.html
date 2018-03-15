@@ -27,14 +27,16 @@
 <div class="locationContainer">
   <div class="location" ng-repeat="location in $ctrl.locations">
     <!-- {{ location }} -->
-    <p class="top"><span>City:</span> {{location.city}}</p>
-    <p><span>State:</span> {{location.state}}</p>
-    <p><span>Activity:</span> {{location.activities[0].activity_type_name}}</p>
-    <p><span>URL:</span><a href="{{location.activities[0].url}}" target="_blank"> {{location.activities[0].url}}</a></p>
-    <p><span>Description:</span> {{location.activities[0].description}}</p>
+    <p class="top"><span class="bold">City:</span> {{location.city}}</p>
+    <p><span class="bold">State:</span> {{location.state}}</p>
+    <p><span class="bold">Activity:</span> {{location.activities[0].activity_type_name}}</p>
+    <p><span class="bold">URL:</span><a href="{{location.activities[0].url}}" target="_blank"> {{location.activities[0].url}}</a></p>
+    <p><span class="bold">Description:</span> <span ng-bind-html="location.activities[0].description"></span></p>
     <img class="thumbnail" ng-src="{{location.activities[0].thumbnail}}">
-    <p><span>Location:</span> {{location.name}}</p>
-    <p><span>Directions:</span> {{location.directions}}</p>
-    <button class="createButton" ng-click="$ctrl.createEvent(location)">Create</button>
+    <p><span class="bold">Location:</span> <span ng-bind-html="location.name"></span></p>
+    <p><span class="bold">Directions:</span> <span ng-bind-html="location.directions"></span></p>
+    <a href="#!/search">
+      <button class="createButton" ng-click="$ctrl.createEvent(location)">Create</button>
+    </a>
   </div>
 </div>

@@ -1,6 +1,6 @@
 (function() {
 
-  function eventsService() {
+  function eventsService($sce) {
     console.log("event service");
     var events = [{
         host: "Darby",
@@ -9,10 +9,10 @@
           "city": "Denver",
           "state": "Colorado",
           "country": "United States",
-          "name": "Green Mountain",
+          "name": $sce.trustAsHtml("Green Mountain"),
           "parent_id": null,
           "unique_id": 694,
-          "directions": "From I-25, take 6th Ave. west. Drive approximately 6 miles to Kipling. Take Kipling south for 2 miles before taking a right on Alameda. Stay on Alameda for 3 miles until you see a parking area on the right. This trail is part of William Frederick Hayden Park.",
+          "directions": $sce.trustAsHtml("From I-25, take 6th Ave. west. Drive approximately 6 miles to Kipling. Take Kipling south for 2 miles before taking a right on Alameda. Stay on Alameda for 3 miles until you see a parking area on the right. This trail is part of William Frederick Hayden Park."),
           "lat": 39.69666,
           "lon": -105.19224,
           "description": null,
@@ -29,7 +29,7 @@
               "\"length\"": "\"7\"",
               "\"nightride\"": "1"
             },
-            "description": "This park has three parking areas. The loop is the same from all. From any trailhead, begin a clockwise loop in the park. On the south-east sides of the park, this loop maintains fairly constant elevation as it winds around the base of Green mountain. On the north west side of the mountain, a jeep road will take you to the top. On top, follow the jeep road past the radio towers, and back onto singletrack on the south east leg of the loop. Descend this singletrack, and finish the loop back to your car.",
+            "description": $sce.trustAsHtml("This park has three parking areas. The loop is the same from all. From any trailhead, begin a clockwise loop in the park. On the south-east sides of the park, this loop maintains fairly constant elevation as it winds around the base of Green mountain. On the north west side of the mountain, a jeep road will take you to the top. On top, follow the jeep road past the radio towers, and back onto singletrack on the south east leg of the loop. Descend this singletrack, and finish the loop back to your car."),
             "length": 7,
             "activity_type": {
               "created_at": "2012-08-15T16:12:35Z",
@@ -71,10 +71,10 @@
           "city": "Portland",
           "state": "Maine",
           "country": "United States",
-          "name": "Evergreen Cemetary",
+          "name": $sce.trustAsHtml("Evergreen Cemetary"),
           "parent_id": null,
           "unique_id": 2047,
-          "directions": "enter evergreen cemetary via stevens ave,  follow road towards back of cemetary,  trail begins behind the duck ponds.  ",
+          "directions": $sce.trustAsHtml("enter evergreen cemetary via stevens ave,  follow road towards back of cemetary,  trail begins behind the duck ponds.  "),
           "lat": 43.68332,
           "lon": -70.30618,
           "description": null,
@@ -91,7 +91,7 @@
               "\"length\"": "\"2\"",
               "\"nightride\"": "null"
             },
-            "description": "stick to the left at the fork,  go up little hill then take right up singletrack slick rock trail.  or stay low and keep on the easy double track.  take any of the lefts and try to make it up the hill.  many inter-connected trails here.  mostly easy to middle class.  a couple burly drops though if your tuff enuff.  a lot of hidden singletrack in here.  please do not build any stunts here as they will be taken down.  see if you can find my natural log ride or cliff drops.",
+            "description": $sce.trustAsHtml("stick to the left at the fork,  go up little hill then take right up singletrack slick rock trail.  or stay low and keep on the easy double track.  take any of the lefts and try to make it up the hill.  many inter-connected trails here.  mostly easy to middle class.  a couple burly drops though if your tuff enuff.  a lot of hidden singletrack in here.  please do not build any stunts here as they will be taken down.  see if you can find my natural log ride or cliff drops."),
             "length": 2,
             "activity_type": {
               "created_at": "2012-08-15T16:12:35Z",

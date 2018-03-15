@@ -1,6 +1,6 @@
 (function(){
 
-  var trailService = function($http) {
+  var trailService = function($http, $sce) {
         return {
             getTrailInfo: getTrailInfo
         };
@@ -22,8 +22,25 @@
               "Accept": "application/json"
             }
           }).then(function(response) {
+              response.data.places.forEach(function(location) {
+                if (location.activities[0]) {
+                  location.activities[0].description = fixHtmlField(location.activities[0].description);
+                }
+                location.directions = fixHtmlField(location.directions);
+                location.name = fixHtmlField(location.name);
+              });
+
               return response.data.places;
           });
+        }
+
+        function fixHtmlField(value) {
+          if (!value) {
+            return value;
+          }
+          value = value.replace(/&lt;[\w ]+\/?&gt;/g, "");
+          value = $sce.trustAsHtml(value);
+          return value;
         }
     };
 

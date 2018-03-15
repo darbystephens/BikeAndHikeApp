@@ -4,21 +4,21 @@
 <h1 id="createHeader">SEARCH EVENT</h1>
 <a class="createSearchAnchor" href="#!/create">create page</a>
 <div id="bikeContainer">
-  <img id="bikeImg" src="imgs/bike.jpeg">
+  <img id="bikeImg" src="imgs/girl.jpeg">
 </div>
 <div class="searchContainer">
   <input type="text" placeholder="Filter search" ng-model="hostFilter">
 </div>
 <div class="eventContainer">
   <div class="eventDiv" ng-repeat="event in $ctrl.events | filter: hostFilter | orderBy: 'host' track by $index" >
-    <p><span>Host:</span> {{event.host}}</p>
-    <p><span>Information:</span> {{event.information}}</p>
-    <p><span>City:</span> {{event.location.city}}</p>
-    <p><span>State:</span> {{event.location.state}}</p>
-    <p><span>Activity:</span> {{event.location.activities[0].activity_type_name}}</p>
-    <p><span>Description:</span> {{event.location.activities[0].description}}</p>
+    <p><span class="bold">Host:</span> {{event.host}}</p>
+    <p><span class="bold">Information:</span> {{event.information}}</p>
+    <p><span class="bold">City:</span> {{event.location.city}}</p>
+    <p><span class="bold">State:</span> {{event.location.state}}</p>
+    <p><span class="bold">Activity:</span> {{event.location.activities[0].activity_type_name}}</p>
+    <p><span class="bold">Description:</span> <span ng-bind-html="event.location.activities[0].description"></span><!--{{event.location.activities[0].description}}--></p>
     <img class="thumbnail" ng-src="{{event.location.activities[0].thumbnail}}">
-    <p><span>Location:</span> {{event.location.name}}</p>
-    <p><span>Directions:</span> {{event.location.directions}}</p>
+    <p><span calss="bold">Location:</span> <span ng-bind-html="event.location.name"></span><!--{{event.location.name}}--></p>
+    <p><span class="bold">Directions:</span> <span ng-bind-html="event.location.directions"></span><!--{{event.location.directions}}--></p>
   </div>
 </div>
