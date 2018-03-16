@@ -7,7 +7,10 @@
         template:"<main-component></main-component>"
       })
       .when("/search",{
-        template:"<search-component></search-component>"
+        template:"<search-component></search-component>",
+        controller: function($rootScope){
+          $rootScope.pageClass = "searchBackgroundImage";
+        }
       })
       .when("/create",{
         template:"<create-component></create-component>",

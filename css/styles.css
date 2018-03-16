@@ -1,4 +1,4 @@
- body {
+body {
    margin: 0;
    background-color: black;
    font-family: 'Open Sans', sans-serif;
@@ -421,14 +421,26 @@ textarea {
 
 .eventContainer {
   width:800px;
-  margin-left: 360px;
+  margin-left: 390px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .eventDiv {
-  width: 380px;
-  margin-right: 10px;
+  width: 381px;
+  margin-right: 13px;
+}
+
+#hikerImg {
+  width: 100%;
+}
+
+#bikeImg {
+  width: 100%;
+}
+
+#campSite {
+  width:100%;
 }
 
 }
